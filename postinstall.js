@@ -1,3 +1,4 @@
+const childProcess = require('child_process')
 const fs = require('fs')
 const path = require('path')
 const os = require('os')
@@ -5,11 +6,13 @@ const os = require('os')
 const platform = os.platform()
 const upFolder = path.resolve(path.join(__dirname, '..', '..'))
 
+const isApple = platform === 'darwin'
+
 // Do nothing if package is installed globally.
 if (require('module').globalPaths.indexOf(upFolder) === -1) {
   var fileName = null
 
-  if (platform === 'darwin') fileName = 'npm-start.command'
+  if (isApple) fileName = 'npm-start.command'
 
   if (fileName) copyIfItDoesNotExist(fileName)
 }
@@ -28,9 +31,9 @@ function copyIfItDoesNotExist (fileName) {
       fs.stat(filePathUp, function (errUp, pathStatUp) {
         // If file does not exist, copy it.
         if (errUp && errUp.code === 'ENOENT') {
-          fs.createReadStream(filePath)
-            .pipe(fs.createWriteStream(filePathUp))
-            .on('error', console.error)
+          if (isApple) {
+            childProcess.spawn('cp', [fileName, '../..'])
+          }
         }
       })
     }
