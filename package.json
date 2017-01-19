@@ -1,26 +1,17 @@
 {
-  "name": "zeroconf-redux",
+  "name": "npm-start-command",
   "version": "0.0.0",
-  "description": "is a minimal React/Redux dev stack, on top of browserify + budo",
-  "engines": {
-    "npm": ">= 3"
-  },
+  "description": "creates a file you can double click to launch npm start",
   "scripts": {
-    "copy_babelrc": "node postinstall.js copy .babelrc",
-    "example_counter": "budo ./examples/counter/index.js:bundle.js --dir ./examples/counter --live --open -- -t babelify",
-    "postinstall": "npm run copy_babelrc",
+    "postinstall": "node postinstall.js",
     "postversion": "git push origin v${npm_package_version}; npm publish; git push origin master",
     "test": "node notest.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fibo/zeroconf-redux.git"
+    "url": "git+https://github.com/fibo/npm-start-command.git"
   },
   "keywords": [
-    "browserify",
-    "budo",
-    "react",
-    "redux",
     "fast",
     "development",
     "prototyping"
@@ -31,18 +22,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/fibo/zeroconf-redux/issues"
+    "url": "https://github.com/fibo/npm-start-command/issues"
   },
-  "homepage": "http://npm.im/zeroconf-redux",
-  "dependencies": {
-    "babel-preset-es2015": "^6.18.0",
-    "babel-preset-react": "^6.16.0",
-    "babelify": "^7.3.0",
-    "budo": "^9.4.5",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "react-redux": "^5.0.2",
-    "redux": "^3.6.0"
-  },
+  "homepage": "http://g14n.info/npm-start-command",
+  "dependencies": {},
   "devDependencies": {}
 }
