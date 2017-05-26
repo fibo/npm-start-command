@@ -4,6 +4,7 @@
 cd -- "$(dirname "$BASH_SOURCE")"
 
 if [ -e package.json ]; then
+  npm install
   npm start
 else
   osascript -e 'tell app "System Events" to display dialog "File package.json not found"'
