@@ -23,25 +23,20 @@ Install command with
 npm install npm-start-command --save-dev
 ```
 
-Optionally, make git ignore *npm-start-command* file.
+Optionally, make git ignore *npm-start.command* file.
 
 ```bash
-echo "npm-start-command" >> .gitignore
+echo "npm-start.command" >> .gitignore
 ```
 
-An *npm-start.command* file will be created: if you click it, your
-development server will be launched.
+An *npm-start.command* file will be created: if you click it, your development server will be launched.
 
 **TODO**:
 
 * support Linux and Windows too.
-* link to [zeroconf-redux] and [x3dom-livereload].
 
 ## License
 
 [MIT](http://g14n.info/mit-license/)
 
 <sub>OS icons provided by <a href="https://icons8.com/">icons8</a>.</sub>
-
-[zeroconf-redux]: http://g14n.info/zeroconf-redux
-[x3dom-livereload]: http://g14n.info/x3dom-livereload
