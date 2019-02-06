@@ -5,7 +5,7 @@
 [Usage](#usage) |
 [License](#license)
 
-<img src="https://rawgit.com/fibo/os-icons8/master/Apple-50.png" width="50" height="50" />
+<img src="https://g14n.info/os-icons8/Apple-50.png" width="50" height="50" />
 
 ## Usage
 
