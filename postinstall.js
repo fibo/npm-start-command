@@ -7,12 +7,14 @@ const platform = os.platform()
 const upFolder = path.resolve(path.join(__dirname, '..', '..'))
 
 const isApple = platform === 'darwin'
+const isWindows = platform === 'win32'
 
 // Do nothing if package is installed globally.
 if (require('module').globalPaths.indexOf(upFolder) === -1) {
   var fileName = null
 
-  if (isApple) fileName = 'npm-start.command'
+  if (isApple) fileName = '_MacOS.npm-start.command'
+  if (isWindows) fileName = '_Windows.npm-start.command'
 
   if (fileName) copyIfItDoesNotExist(fileName)
 }

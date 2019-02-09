@@ -6,6 +6,7 @@
 [License](#license)
 
 <img src="https://g14n.info/os-icons8/Apple-50.png" width="50" height="50" />
+<img src="https://g14n.info/os-icons8/Windows8-50.png" width="50" height="50" />
 
 ## Usage
 
@@ -23,17 +24,13 @@ Install command with
 npm install npm-start-command --save-dev
 ```
 
-Optionally, make git ignore *npm-start.command* file.
+### MacOS
 
-```bash
-echo "npm-start.command" >> .gitignore
-```
+Click on file *_MacOS.npm-start.command* , your development server will be launched.
 
-An *npm-start.command* file will be created: if you click it, your development server will be launched.
+### Windows
 
-**TODO**:
-
-* support Linux and Windows too.
+Click on file *_Windows.npm-start.bat* , your development server will be launched.
 
 ## License
 
