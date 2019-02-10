@@ -24,6 +24,11 @@ Install command with
 npm install npm-start-command --save-dev
 ```
 
+This will create two files:
+
+- *_MacOS.npm-start.command*
+- *_Windows.npm-start.bat*
+
 ### MacOS
 
 Click on file *_MacOS.npm-start.command* , your development server will be launched.
