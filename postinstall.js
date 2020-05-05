@@ -14,7 +14,7 @@ if (require('module').globalPaths.indexOf(upFolder) === -1) {
   var fileName = null
 
   if (isApple) fileName = '_MacOS.npm-start.command'
-  if (isWindows) fileName = '_Windows.npm-start.command'
+  if (isWindows) fileName = '_Windows.npm-start.bat'
 
   if (fileName) copyIfItDoesNotExist(fileName)
 }
